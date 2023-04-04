@@ -5,13 +5,13 @@
 
 int registro() //Função responsável por cadastrar os usuários no sistema
 {
-	//inicio criação de cariáveis/string
+	//inicio criação de variáveis/string
 	char arquivo[40];
 	char cpf[40];
 	char nome[40];
 	char sobrenome[40];
 	char cargo[40];
-	//Final criação de cariáveis/string
+	//Final criação de variáveis/string
 	
 	printf("Digite o CPF a ser cadastrado:  "); //coletando informações do usuário
 	scanf("%s", cpf); //%s refere-se a string
@@ -125,13 +125,14 @@ int main()
 		printf("### Cartório da EBAC ### \n\n"); //inicio do menu
 		printf("Escolha a opção desejada do menu:\n\n");
 		printf("\t1 - Registrar nomes \n");
-		printf("\t2 - Consultar nomes\n");
-		printf("\t3 - Deletar nomes\n"); 
+		printf("\t2 - Consultar nomes \n");
+		printf("\t3 - Deletar nomes \n\n");
+		printf("\t4 - Sair do Sistema \n\n"); 
 		printf("Opção:  "); //fim do menu
 		
 		scanf("%d", &opcao); //armazenando a escolha do usuário
 		
-		system("cls");
+		system("cls"); //responsável por limpar a tela
 		
 		switch(opcao) //inicio da seleção do menu
 		{
@@ -145,6 +146,11 @@ int main()
 			
 			case 3:
 			deletar();
+			break;
+			
+			case 4:
+			printf("Obrigado por utilizar o sistema! \n");
+			return 0;
 			break;
 			
 			default:
